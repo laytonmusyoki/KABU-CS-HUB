@@ -1,0 +1,198 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+  <header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">Semester <span>3.2</span></a>
+          </div>
+        <ul class="nav justify-content-end nav nav-underline">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#notes">Notes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#exams">Past Papers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#videos">YouTube</a>
+            </li>
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+</header>
+<section class="notes" id="notes">
+  <h2 class="title">Unit Notes</h2>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-sm-12 col-md-4">
+        <div class="notes-card">
+          <div class="notes-unit justify-content-center align-items-center">
+            <div class="icon"><i class="fa-solid fa-code-fork"></i></div>
+            <h3 class="unit-name">COMP 320</h3>
+            <div class="button">
+              <a href="files/BIBL 110 NOTES JAN 2022.docx" download>Download Notes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="notes-card">
+          <div class="notes-unit">
+            <div class="icon"><i class="fa-solid fa-code"></i></div>
+            <h3 class="unit-name">COMP 321</h3>
+            <div class="button">
+              <a href="files/BIBL 110 NOTES JAN 2022.docx" download>Download Notes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="notes-card">
+          <div class="notes-unit">
+            <div class="icon"><i class="fa-solid fa-network-wired"></i></div>
+            <h3 class="unit-name">COMP 323</h3>
+            <div class="button">
+              <a href="files/BIBL 110 NOTES JAN 2022.docx" download>Download Notes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <div class="notes-card">
+          <div class="notes-unit">
+            <div class="icon"><i class="fa-solid fa-database"></i></div>
+            <h3 class="unit-name">COMP 324</h3>
+            <div class="button">
+              <a href="files/BIBL 110 NOTES JAN 2022.docx" download>Download Notes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="notes-card">
+          <div class="notes-unit">
+            <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <h3 class="unit-name">COMP 325</h3>
+            <div class="button">
+              <a href="files/BIBL 110 NOTES JAN 2022.docx" download>Download Notes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+<section class="notes" id="exams">
+  <h2 class="title">Past Papers</h2>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-sm-12 col-md-4">
+        <div class="notes-card">
+          <div class="notes-unit">
+            <div class="icon"><i class="fa-solid fa-code-fork"></i></div>
+            <h3 class="unit-name">COMP 320</h3>
+            <div class="button">
+              <a href="files/BIBL 110 NOTES JAN 2022.docx" download>Download Past Papers</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="notes-card">
+          <div class="notes-unit">
+            <div class="icon"><i class="fa-solid fa-code"></i></div>
+            <h3 class="unit-name">COMP 321</h3>
+            <div class="button">
+              <a href="files/BIBL 110 NOTES JAN 2022.docx" download>Download Past Papers</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="notes-card">
+          <div class="notes-unit">
+            <div class="icon"><i class="fa-solid fa-network-wired"></i></div>
+            <h3 class="unit-name">COMP 323</h3>
+            <div class="button">
+              <a href="files/BIBL 110 NOTES JAN 2022.docx" download>Download Past Papers</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <div class="notes-card">
+          <div class="notes-unit">
+            <div class="icon"><i class="fa-solid fa-database"></i></div>
+            <h3 class="unit-name">COMP 324</h3>
+            <div class="button">
+              <a href="files/BIBL 110 NOTES JAN 2022.docx" download>Download Past Papers</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="notes-card">
+          <div class="notes-unit">
+            <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <h3 class="unit-name">COMP 325</h3>
+            <div class="button">
+              <a href="files/BIBL 110 NOTES JAN 2022.docx" download>Download Past Papers</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="videos" id="videos">
+  <h2 class="title">YouTube</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="card" style="width: 18rem;">
+          <img src="https://img.youtube.com/vi/ugJFsJLiGic/0.jpg" class="card-img-top" alt="Video Thumbnail 1">
+          <div class="card-body">
+            <h5 class="card-title">BIT 4209: DISTRIBUTED SYSTEMS</h5>
+            <p class="card-text"></p>
+            <a href="https://www.youtube.com/watch?v=ugJFsJLiGic&t=32s" class="btn" target="_blank">Watch Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="https://img.youtube.com/vi/9j_bONqKBQo/0.jpg" class="card-img-top" alt="Video Thumbnail 1">
+          <div class="card-body">
+            <h5 class="card-title">BIT3201: OBJECT ORIENTED ANALYSIS AND DESIGN</h5>
+            <p class="card-text"></p>
+            <a href="https://www.youtube.com/watch?v=9j_bONqKBQo" class="btn" target="_blank">Watch Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="https://img.youtube.com/vi/ObbNGhcxXJA/0.jpg" class="card-img-top" alt="Video Thumbnail 1">
+          <div class="card-body">
+            <h5 class="card-title">Oracle SQL Tutorial | Oracle DBA | Oracle SQL for Beginners | Great Learning</h5>
+            <p class="card-text"></p>
+            <a href="https://www.youtube.com/watch?v=ObbNGhcxXJA" class="btn" target="_blank">Watch Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+{% endblock %}

@@ -1,0 +1,269 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+  <header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">Semester <span>1.2</span></a>
+          </div>
+        <ul class="nav justify-content-end nav nav-underline">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#notes">Notes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#exams">Past Papers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#videos">YouTube</a>
+            </li>
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+</header>
+<section class="notes" id="notes">
+  <h2 class="title">Unit Notes</h2>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-sm-12 col-md-4">
+        <div class="notes-card">
+          <div class="notes-unit justify-content-center align-items-center">
+            <div class="icon"><i class="fa-solid fa-microchip"></i></div>
+            <h3 class="unit-name">COMP 120</h3>
+            <div class="button">
+              <a href="notes/into programmming c.pdf" download>Download Notes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="notes-card">
+          <div class="notes-unit">
+            <div class="icon"><i class="fa-solid fa-code"></i></div>
+            <h3 class="unit-name">COMP 121</h3>
+            <div class="button">
+              <a href="notes/rosen_discrete_mathematics_and_its_applications_7th_edition_compressed.pdf" download>Download Notes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="notes-card">
+          <div class="notes-unit">
+            <div class="icon"><i class="fa-solid fa-calculator"></i></div>
+            <h3 class="unit-name">COMP 124</h3>
+            <div class="button">
+              <a href="#" download>Download Notes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-4">
+        <div class="notes-card">
+          <div class="notes-unit">
+            <div class="icon"><i class="fa-solid fa-comments"></i></div>
+            <h3 class="unit-name">COMS 120</h3>
+            <div class="button">
+              <a href="notes/comms skills Mt Kenya_compressed.pdf" download>Download Notes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="notes-card">
+          <div class="notes-unit">
+            <div class="icon"><i class="fa-solid fa-vector-square"></i></div>
+            <h3 class="unit-name">MATH 113</h3>
+            <div class="button">
+              <a href="notes/SMA-2101-CALCULUS-I_compressed.pdf" download>Download Notes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="notes-card">
+          <div class="notes-unit">
+            <div class="icon"><i class="fa-solid fa-gears"></i></div>
+            <h3 class="unit-name">PHYS 120</h3>
+            <div class="button">
+              <a href="notes/173_BasicElectricalEngineeringbyV.K.MehtaandRohitMehta_compressed (1)_compressed.pdf" download>Download Notes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <div class="notes-card">
+          <div class="notes-unit">
+            <div class="icon"><i class="fa-solid fa-cross"></i></div>
+            <h3 class="unit-name">BIBL 120</h3>
+            <div class="button">
+              <a href="#" download>Download Notes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="notes-card">
+          <div class="notes-unit">
+            <div class="icon"><i class="fa-solid fa-vector-square"></i></div>
+            <h3 class="unit-name">MATH 123</h3>
+            <div class="button">
+              <a href="notes/STA 2100 Probability and Statistics I_compressed_compressed (1).pdf" download>Download Notes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="notes" id="exams">
+  <h2 class="title">Past Papers</h2>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-sm-12 col-md-4">
+        <div class="notes-card">
+          <div class="notes-unit">
+            <div class="icon"><i class="fa-solid fa-microchip"></i></div>
+            <h3 class="unit-name">COMP 120</h3>
+            <div class="button">
+              <a href="notes/COMP 120 PAST PAPERS.pdf" download>Download Past Papers</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="notes-card">
+          <div class="notes-unit">
+            <div class="icon"><i class="fa-solid fa-code"></i></div>
+            <h3 class="unit-name">COMP 121</h3>
+            <div class="button">
+              <a href="notes/COMP 121 PAST PAPERS.pdf" download>Download Past Papers</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="notes-card">
+          <div class="notes-unit">
+            <div class="icon"><i class="fa-solid fa-calculator"></i></div>
+            <h3 class="unit-name">COMP 124</h3>
+            <div class="button">
+              <a href="notes/COMP 124 PAST PAPERS.pdf" download>Download Past Papers</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-4">
+        <div class="notes-card">
+          <div class="notes-unit">
+            <div class="icon"><i class="fa-solid fa-comments"></i></div>
+            <h3 class="unit-name">COMS 120</h3>
+            <div class="button">
+              <a href="notes/COMS 120 PAST PAPERS.pdf" download>Download Past Papers</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="notes-card">
+          <div class="notes-unit">
+            <div class="icon"><i class="fa-solid fa-vector-square"></i></div>
+            <h3 class="unit-name">MATH 113</h3>
+            <div class="button">
+              <a href="notes/MATH 113 PAST PAPERS.pdf" download>Download Past Papers</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="notes-card">
+          <div class="notes-unit">
+            <div class="icon"><i class="fa-solid fa-gears"></i></div>
+            <h3 class="unit-name">PHYS 120</h3>
+            <div class="button">
+              <a href="notes/PHYS 120 PAST PAPERS.pdf" download>Download Past Papers</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <div class="notes-card">
+          <div class="notes-unit">
+            <div class="icon"><i class="fa-solid fa-cross"></i></div>
+            <h3 class="unit-name">BIBL 120</h3>
+            <div class="button">
+              <a href="notes/BIBL 120 PAST PAPERS.pdf" download>Download Past Papers</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="notes-card">
+          <div class="notes-unit">
+            <div class="icon"><i class="fa-solid fa-vector-square"></i></div>
+            <h3 class="unit-name">MATH 123</h3>
+            <div class="button">
+              <a href="notes/MATH 123 PAST PAPERS.pdf" download>Download Past Papers</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="videos" id="videos">
+  <h2 class="title">YouTube</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="card" style="width: 18rem;">
+          <img src="https://img.youtube.com/vi/p2b2Vb-cYCs/0.jpg" class="card-img-top" alt="Video Thumbnail 1">
+          <div class="card-body">
+            <h5 class="card-title">Introduction to Discrete Mathematics</h5>
+            <p class="card-text"></p>
+            <a href="https://www.youtube.com/watch?v=p2b2Vb-cYCs&list=PLBlnK6fEyqRhqJPDXcvYlLfXPh37L89g3" class="btn" target="_blank">Watch Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="https://img.youtube.com/vi/7QhwauUYSWk/0.jpg" class="card-img-top" alt="Video Thumbnail 1">
+          <div class="card-body">
+            <h5 class="card-title">DIT1302: INTRODUCTION TO STRUCTURED PROGRAMMING</h5>
+            <p class="card-text"></p>
+            <a href="https://www.youtube.com/watch?v=7QhwauUYSWk" class="btn" target="_blank">Watch Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="https://img.youtube.com/vi/GiCojsAWRj0/0.jpg" class="card-img-top" alt="Video Thumbnail 1">
+          <div class="card-body">
+            <h5 class="card-title">Calculus 1 Review - Basic Introduction</h5>
+            <p class="card-text"></p>
+            <a href="https://www.youtube.com/watch?v=GiCojsAWRj0&list=PL0o_zxa4K1BWYThyV4T2Allw6zY0jEumv" class="btn" target="_blank">Watch Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+{% endblock %}

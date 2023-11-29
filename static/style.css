@@ -1,0 +1,589 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+    font-family: 'Ubuntu', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+nav #icon {
+    color: white;
+    font-size: 30px;
+    line-height: 80px;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+.navbar {
+    position: fixed;
+    padding: 30px 24px;
+    width: 100%;
+    z-index: 999;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+.hamburger
+{
+    display: none;
+    cursor: pointer;
+}
+.bar
+{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+}
+.navbar.sticky {
+    padding: 15px 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: #CC7722;
+    font-size: 35px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.navbar .logo a span {
+    color: #CC7722;
+    transition: all 0.3s ease;
+}
+.navbar li {
+    list-style: none;
+    display: inline-block;
+}
+.navbar li a {
+    display: block;
+    color: #CC7722;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: all 0.3s ease;
+}
+.navbar li a:hover {
+    color: #CC7722;
+    letter-spacing: 0.1rem;
+}
+.navbar.sticky li a:hover{
+    color: #CC7722;
+}
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: #CC7722;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.home_content
+{
+    background-image: url("images/sincerely-media-HoEYgBL_Gcs-unsplash-HTArWVTHj-transformed.jpeg");
+    background-position: center center;
+    background-repeat:no-repeat;
+    min-height: 100vh;
+}
+.text-1 {
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+.text-2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+    margin-bottom: 20px;
+}
+.text-3 p{
+    font-size: 18px;
+    margin: 5px;
+    margin-bottom: 20px;
+}
+.text-3 span {
+    color: #CC7722;
+    font-weight: 500;
+}
+.home_content a
+{
+    display: inline-block;
+    background: #CC7722;
+    color: #fff;
+    font-size: 20px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 30px;
+    border: 2px solid #CC7722;
+    transition: all 0.3s ease;
+    margin: 10px;
+    justify-content: center;
+    text-decoration: none;
+}
+.home_content a:hover
+{
+    color: #CC7722;
+    background: none;
+}
+/* Add this CSS code to your existing CSS file or create a new one */
+
+/* Style the Swiper container */
+.home_content .swiper-container {
+    width: 100%;
+    height: 400px; /* Adjust the height as needed */
+  }
+  
+  /* Style each slide */
+.home_content .swiper-slide img {
+    width: 100%;
+    height: auto;
+    background-color: transparent; /* Set the background of images to transparent */
+    border-radius: 8px; /* Add rounded corners for a modern look */
+  }
+  
+  /* Customize navigation arrows (optional) */
+.home_content .swiper-button-next,
+.home_content .swiper-button-prev {
+    color: #fff;
+    background-color: #CC7722;
+    border-radius: 50%;
+    font-size: 20px;
+  }
+  
+  /* Customize pagination bullets (optional) */
+.home_content .swiper-pagination-bullet {
+    background-color: #CC7722;
+  }
+  
+
+section {
+    padding: 100px 0;
+}
+.notes, .about, .education, .services, .skills .teams, .contact, .semester-units, .video-links, footer {
+    font-family: 'Ubuntu', sans-serif;
+}
+.home .home-content,
+.notes .course-content,
+.about .about-content,
+.services .serv-content,
+.skills .skills-content,
+.contact .contact-content,
+.education .education-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .title {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+section .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+section .title::after {
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    font-size: 20px;
+    color: #CC7722;
+    padding: 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+.notes .course-content a
+{
+    color: black;
+}
+.card{
+    background: #fff;
+    padding: 20px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;   
+    margin-top: 10px;  
+    border-radius: 10px; 
+    margin-bottom: 10px; 
+}
+.card .semester i
+{
+    font-size: 40px;
+    color: #CC7722;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+    padding: 10px 10px;
+    background-color: 0 4px 8px rgb(0, 0, 0);
+    border-radius: 5px;
+}
+.card .units
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: teal;
+}
+.card .unit 
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.card .unit span {
+    padding: 5px 5px;
+    font-size: 10px;
+}
+.card:hover
+{
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+}
+.card .semester {
+    transition: all 0.3s ease;
+}
+.card:hover .semester{
+    transform: scale(1.05);
+}
+.card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.videos a
+{
+    background: #CC7722;
+    border: 2px solid #000;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+.videos a:hover
+{
+    color: #CC7722;
+    background: none;
+    border: 2px solid #000;
+}
+  /* Add more specific styling as needed */
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+.contact .contact-content .text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+    text-align: justify;
+}
+.contact .contact-content .left .icons {
+    margin: 10px 0;
+}
+.contact .contact-content .row {
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: #CC7722;
+}
+.contact .contact-content .info .head{
+    font-weight: 500;
+}
+.contact .contact-content .info .sub-title{
+    color: #333;
+}
+.contact .right form .fields{
+    display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact .right form .textarea{
+    height: 80px;
+    width: 100%;
+}
+.contact .right form .name {
+    margin-right: 10px;
+}
+.contact .right form .email {
+    margin-left: 10px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.contact .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+.contact .right form .button{
+    height: 47px;
+    width: 170px;
+}
+.contact .right form .button button{
+    width: 100%;
+    height: 100%;
+    border: 2px solid #CC7722;
+    background: #CC7722;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.contact .right form .button button:hover{
+    color: #CC7722;
+    background: none;
+}
+
+footer {
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+    text-align: center;
+}
+footer span a {
+    color: #CC7722;
+    text-decoration: none;
+}
+footer span a:hover {
+    text-decoration: underline;
+}
+footer .follow a {
+    font-size: 2.5rem;
+    color: #CC7722;
+    margin: 0.7rem;
+}
+footer .follow a:hover {
+    color: #fff;
+}
+.semester-units .semester-content {
+    width: 50%;
+    border-radius: 10px;
+    padding: 10px;
+    background: lightgrey;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+    margin: 0 auto;
+    border: 1px solid #000;
+  }
+
+.semester-units .semester-content .unit span {
+    color: #000;
+    margin: 5px;
+}
+.semester-units .semester-content .unit 
+{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+.semester-units .semester-content .unit span {
+    padding: 5px 5px;
+    margin-right: 5px; /* Add some spacing between items */
+    font-size: 10px;
+}
+.notes .notes-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.notes .notes-card
+{
+    background: #fff;
+    padding: 20px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;   
+    margin-top: 10px;  
+    border-radius: 10px; 
+    margin-bottom: 10px; 
+}
+/* Add a class to trigger the appearing animation */
+.notes .notes-unit
+{
+    padding: 10px;
+}
+.notes .icon
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 50%; /* Make it circular */
+}
+.notes .notes-unit i
+{
+    font-size: 2rem;
+    color: #CC7722;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+    padding: 10px 10px;
+    background-color: 0 4px 8px rgb(0, 0, 0);
+    border-radius: 5px;
+}
+.notes .unit-name
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.notes .notes-unit a {
+    display: inline-block;
+    background: #CC7722;
+    color: #fff;
+    font-size: 15px;
+    padding: 5px 15px;
+    margin-top: 20px;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    transition: all 0.3s ease;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}                                                
+.notes .notes-unit a:hover {
+    color: #CC7722;
+    background: none;
+    box-shadow: none; /* Remove the shadow on hover */
+}
+.notes .notes-unit ul a
+{
+    background: none;
+    color: #000;
+    font-size: 20px;
+    padding: 5px 15px;
+    margin-top: 10px;
+    margin: 5px;
+}
+@media (max-width: 995px)
+{
+    .home_content a
+    {
+        display: flex;
+    } 
+}
+@media (max-width: 947px)
+{
+    .text-2{
+        font-size: 70px;
+    }
+    .text-3{
+        font-size: 35px;
+    }
+    .home_content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .contact .contact-content .column {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+@media (max-width: 801px)
+{
+    .hamburger
+    {
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2)
+    {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1)
+    {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3)
+    {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    ul
+    {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+    .nav-item
+    {
+        margin: 16px 0;
+    }
+    ul.active
+    {
+        left: 0;
+    }
+    .home_content a{
+        font-size: 20px;
+        padding: 10px 30px;
+        width: 15rem;
+    }
+}

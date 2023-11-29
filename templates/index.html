@@ -1,0 +1,315 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">Bsc. <span>CS</span></a>
+              </div>
+            <ul class="nav justify-content-end nav nav-underline">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="check.html">News</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="check.html">Useful Links</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contact</a>
+                </li>
+              </ul>
+              <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="home_content" id="home_content">
+        <div class="container">
+            <div class="row">
+              {% with messages=get_flashed_messages(with_categories=True) %}
+              {% if messages %}
+              {% for category,msg in messages %}
+                
+                  <div class="alert alert-{{category}} alert-dismissible fade show  name" role="alert" >
+                    <strong> {{msg}}</strong>
+                    <button type="button" class="btn-close name1" data-bs-dismiss="alert" aria-label="close"></button>
+                  </div>
+
+              {% endfor %}
+              {% endif %}
+              {% endwith %}
+                <div class="col-sm-12 col-md-6">
+                    <div class="column left">
+            <div class="text-1">Welcome to</div>
+            <div class="text-2">KABU CS HUB</div>
+            <div class="text-3">
+                <p>
+                    Unleash potential with comprehensive materials for all years. 
+                    Access notes, past papers, and resources. 
+                    Excel in computer science on our learning journey.
+                </p>
+            </div>
+            <div class="buttons">
+                <a href="#sem_content">Course Semesters</a>
+                <a href="#">Web Help</a>
+            </div>  
+        </div>
+                </div>
+                <div class="col-sm-12 col-md-6"></div>
+            </div>
+        </div>
+    </section>
+    <section class="sem_content" id="sem_content">
+        <h2 class="title">Course Semesters</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                    <div class="card">
+                        <a href="{{ url_for('sem1_1') }}">
+                          <div class="semester">
+                                <i class="fa-solid fa-book-open-reader"></i>
+                              <div class="text">Semester 1.1</div>
+                              <div class="units">Units</div>
+                              <div class="unit">
+                                <span>COMP 110</span>
+                                <span>COMP 112</span>
+                                <span>COMS 110</span>
+                                <span>MATH 110</span>
+                                <span>MATH 111</span>
+                                <span>PHYS 110</span>
+                                <span>BIBL 110</span>
+                              </div>
+                          </div>
+                        </a>
+                      </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="card">
+                        <!-- Semester 1.2 -->
+                        <a href="{{ url_for('sem1_2') }}">
+                        <div class="semester">
+                            <i class="fa-solid fa-database"></i>
+                            <div class="text">Semester 1.2</div>
+                            <div class="units">Units</div>
+                            <div class="unit">
+                              <span>COMP 120</span>
+                              <span>COMP 121</span>
+                              <span>COMP 122</span>
+                              <span>MATH 113</span>
+                              <span>MATH 123</span>
+                              <span>PHYS 120</span>
+                              <span>BIBL 120</span>
+                            </div>
+                        </div>
+                      </a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="card">
+                      <a href="{{ url_for('sem2_1') }}">
+                          <div class="semester">
+                            <i class="fa-solid fa-gears"></i>
+                              <div class="text">Semester 2.1</div>
+                              <div class="units">Units</div>
+                              <div class="unit">
+                                <span>COMP 213</span>
+                                <span>COMP 214</span>
+                                <span>COMP 215</span>
+                                <span>COMP 216</span>
+                                <span>MATH 121</span>
+                                <span>MATH 211</span>
+                                <span>BIBL 210</span>
+                              </div>
+                          </div>
+                        </a>
+                      </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                    <div class="card">
+                      <a href="{{ url_for('sem2_2') }}">
+                          <div class="semester">
+                            <i class="fa-solid fa-rocket"></i>
+                              <div class="text">Semester 2.2</div>
+                              <div class="units">Units</div>
+                              <div class="unit">
+                                <span>COMP 220</span>
+                                <span>COMP 221</span>
+                                <span>COMP 223</span>
+                                <span>COMP 224</span>
+                                <span>MATH 312</span>
+                                <span>SOCI 100</span>
+                                <span>BIBL 222</span>
+                              </div>
+                          </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="card">
+                      <a href="{{ url_for('sem3_1') }}">
+                            <div class="semester">
+                                <i class="fa-solid fa-microchip"></i>
+                                <div class="text">Semester 3.1</div>
+                                <div class="units">Units</div>
+                                <div class="unit">
+                                    <span>BMGT 214</span>
+                                    <span>COMP 310</span>
+                                    <span>COMP 311</span>
+                                    <span>COMP 312</span>
+                                    <span>COMP 313</span>
+                                    <span>COMP 314</span>
+                                    <span>MATH 314</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div> 
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="card">
+                      <a href="{{ url_for('sem3_2') }}">
+                          <div class="semester">
+                            <i class="fa-solid fa-puzzle-piece"></i>
+                              <div class="text">Semester 3.2</div>
+                              <div class="units">Units</div>
+                              <div class="unit">
+                                <span>COMP 320</span>
+                                <span>COMP 321</span>
+                                <span>COMP 322</span>
+                                <span>COMP 323</span>
+                                <span>COMP 324</span>
+                                <span>COMP 325</span>
+                                <span>COMP 330</span>
+                              </div>
+                          </div>
+                        </a>
+                    </div> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                    <div class="card">
+                      <a href="{{ url_for('sem4_1') }}">
+                          <div class="semester">
+                            <i class="fa-solid fa-code-branch"></i>
+                              <div class="text">Semester 4.1</div>
+                              <div class="units">Units</div>
+                              <div class="unit">
+                                <span>COMP 410</span>
+                                <span>COMP 411</span>
+                                <span>COMP 412</span>
+                                <span>COMP 414</span>
+                              </div>
+                          </div>
+                        </a>
+                      </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="card">
+                      <a href="{{ url_for('sem4_2') }}">
+                          <div class="semester">
+                            <i class="fa-solid fa-user-graduate"></i>
+                              <div class="text">Semester 4.2</div>
+                              <div class="units">Units</div>
+                              <div class="unit">
+                                <span>COMP 420</span>
+                                <span>COMP 421</span>
+                                <span>COMP 422</span>
+                                <span>COMP 423</span>
+                                <span>COMP 424</span>
+                                <span>COMP 425</span>
+                              </div>
+                            </div>
+                        </a>
+                      </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="card">
+                        <div class="semester">
+                          <i class="fa-regular fa-folder-open"></i>
+                            <div class="text">Past Papers</div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+              
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="max-width">
+          <h2 class="title">Contact Me</h2>
+          <div class="contact-content">
+            <div class="column left">
+              <div class="text">Get in Touch</div>
+              <p>
+                For any comments, compliments, complaints or inquiries you can reach me via these social links and platforms.
+                I cannot wait to hear from you.
+              </p>
+              <div class="icons">
+                <div class="row">
+                  <i class="fas fa-user"></i>
+                  <div class="info">
+                    <div class="head">Name</div>
+                    <div class="sub-title">Esiepe Owen</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <div class="info">
+                    <div class="head">Address</div>
+                    <div class="sub-title">Nakuru, Kenya</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <i class="fas fa-envelope"></i>
+                  <div class="info">
+                    <div class="head">Email</div>
+                    <div class="sub-title">obwangitowen@gmail.com</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column right">
+              <div class="text">Leave me a message</div>
+              <form action="{{ url_for('send_mail') }}" method="post">
+                <div class="fields">
+                  <div class="field name">
+                    <input type="text" name="name" placeholder="Name" required />
+                  </div>
+                  <div class="field email">
+                    <input type="email" name="email" placeholder="Email" required />
+                  </div>
+                </div>
+                <div class="field">
+                  <input type="text" name="subject" placeholder="Subject" required />
+                </div>
+                <div class="field textarea">
+                  <textarea
+                    name="description"
+                    id=""
+                    cols="30"
+                    rows="10"
+                    placeholder="Describe project.."
+                    required
+                  ></textarea>
+                </div>
+                <div class="button">
+                  <button type="submit">Send message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+{% endblock %}
