@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %} KABU CS HUB | Adding_papers {% endblock %}
+
+{% block content %}
+
+
+
+<section class="home_content" id="home_content">
+    <div class="container">
+        {% with messages=get_flashed_messages(with_categories=True) %}
+                  {% if messages %}
+                  {% for category,msg in messages %}
+                    
+                      <div class="alert alert-{{category}} alert-dismissible fade show  name" role="alert" >
+                        <strong> {{msg}}</strong>
+                        <button type="button" class="btn-close name1" data-bs-dismiss="alert" aria-label="close"></button>
+                      </div>
+    
+                  {% endfor %}
+                  {% endif %}
+                  {% endwith %}
+        <div class="box">
+            <h1 style="text-align: center;color: #555;">Add PastPapers</h1>
+                  <form action="" method="post" enctype="multipart/form-data">
+                    <label for="">Semeseter:</label>
+                    <select name="semester" id="">
+                        <option value="Semester1.1">Semester1.1</option>
+                        <option value="Semester1.2">Semester1.2</option>
+                        <option value="Semester2.1">Semester2.1</option>
+                        <option value="Semester2.2">Semester2.2</option>
+                        <option value="Semester3.1">Semester3.1</option>
+                        <option value="Semester3.2">Semester3.2</option>
+                        <option value="Semester4.1">Semester4.1</option>
+                        <option value="Semester4.2">Semester4.2</option>
+                    </select>
+                    <label for="">Unit Code:</label>
+                    <input type="text" name="code" placeholder="Enter unit code">
+                    <label for="">Choose File</label>
+                    <input type="file" name="pdf" class="form-control" style="outline: none;" accept=".pdf">
+                    <input type="submit" class="btn btn-success" value="Add PastPapers">
+                </form>
+        </div>
+    </div>
+    </section>
+
+    {% endblock %}

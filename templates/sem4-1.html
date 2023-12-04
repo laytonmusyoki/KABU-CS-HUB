@@ -1,50 +1,27 @@
 {% extends 'base.html' %}
 
-{% block title %} Home {% endblock %}
+{% block title %} KABU CS HUB | 4.1 {% endblock %}
 
 {% block content %}
-  <header>
-    <nav class="navbar">
-        <div class="logo">
-            <a href="#">Semester <span>4.1</span></a>
-          </div>
-        <ul class="nav justify-content-end nav nav-underline">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#notes">Notes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#exams">Past Papers</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#videos">YouTube</a>
-            </li>
-          </ul>
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-    </nav>
-</header>
+
 <section class="notes" id="notes">
   <h2 class="title">Unit Notes</h2>
   <div class="container text-center">
     <div class="row">
+      {% for note in notes %}
       <div class="col-sm-12 col-md-4">
         <div class="notes-card">
-          <div class="notes-unit justify-content-center align-items-center">
-            <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-            <h3 class="unit-name">COMP 410</h3>
+          <div class="notes-unit">
+            <div class="icon"><i class="fa-solid fa-gears"></i></div>
+            <h3 class="unit-name">{{note[2]}}</h3>
             <div class="button">
-              <a href="files/BIBL 110 NOTES JAN 2022.docx" download>Download Notes</a>
+              <a href="{{url_for('download',table='notes',id=note[0])}}" download>Download Notes</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-sm-12 col-md-4">
+      {% endfor %}
+      <!-- <div class="col-sm-12 col-md-4">
         <div class="notes-card">
           <div class="notes-unit">
             <div class="icon"><i class="fa-solid fa-robot"></i></div>
@@ -79,25 +56,27 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </section>
 <section class="notes" id="exams">
   <h2 class="title">Past Papers</h2>
   <div class="container text-center">
     <div class="row">
+      {% for paper in papers %}
       <div class="col-sm-12 col-md-4">
         <div class="notes-card">
           <div class="notes-unit">
-            <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-            <h3 class="unit-name">COMP 410</h3>
+            <div class="icon"><i class="fa-solid fa-gears"></i></div>
+            <h3 class="unit-name">{{paper[2]}}</h3>
             <div class="button">
-              <a href="files/BIBL 110 NOTES JAN 2022.docx" download>Download Past Papers</a>
+              <a href="{{url_for('download',table='papers',id=paper[0])}}" download>Download Past Papers</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-sm-12 col-md-4">
+      {% endfor %}
+      <!-- <div class="col-sm-12 col-md-4">
         <div class="notes-card">
           <div class="notes-unit">
             <div class="icon"><i class="fa-solid fa-robot"></i></div>
@@ -132,7 +111,7 @@
           </div>
         </div>
       </div>
-      </div>
+      </div> -->
   </div>
 </section>
 <section class="videos" id="videos">

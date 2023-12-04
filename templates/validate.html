@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %} KABU CS HUB  | Admin_validation{% endblock %}
+
+{% block content %}
+
+<section class="home_content" id="home_content">
+<div class="container">
+    <marquee behavior="" direction=""><h3 style="color: #555;">Please not its only for Admins</h3></marquee>
+    <div class="boxs">
+        <h1 style="text-align: center;color: #555;">Admin Authentication</h1>
+        {% with messages=get_flashed_messages(with_categories=True) %}
+              {% if messages %}
+              {% for category,msg in messages %}
+                
+                  <div class="alert alert-{{category}} alert-dismissible fade show  name" role="alert" >
+                    <strong> {{msg}}</strong>
+                    <button type="button" class="btn-close name1" data-bs-dismiss="alert" aria-label="close"></button>
+                  </div>
+
+              {% endfor %}
+              {% endif %}
+              {% endwith %}
+        <form action="" method="post">
+            <label for="">Username:</label>
+            <input type="text" placeholder="Enter username" name="username" value="{{username}}">
+            <label for="">Password:</label>
+            <input type="password" placeholder="Enter password" name="password" value="{{password}}">
+            <label for="">Authorization Code:</label>
+            <input type="password" placeholder="Enter Authorization Code" name="code" value="{{code}}">
+            <input type="submit" class="btn btn-success" value="Check me in">
+        </form>
+    </div>
+</div>
+</section>
+{% endblock %}
