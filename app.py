@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, redirect, url_for, flash,session,make_response
-import pymysql
 from flask_mysqldb import MySQL
 from urllib.parse import quote
 from io import BytesIO
