@@ -237,27 +237,32 @@ def papers():
 
 
 @app.route('/download/<table>/<id>')
-def download(table,id):
-    cur=mysql.connection.cursor()
-    if table=="notes":
-        cur.execute("SELECT * FROM notes WHERE id=%s",(id))
-        notes=cur.fetchone()
-        mysql.connection.commit()
-        cur.close()
-        response=make_response(notes[4])
-        response.headers['Content-Type']='application/pdf'
-        response.headers['Content-Disposition']=f"attachment; filename='{notes[3]}'"
-        return response
-    else:
-        cur.execute("SELECT * FROM papers WHERE id=%s",(id))
-        papers=cur.fetchone()
-        mysql.connection.commit()
-        cur.close()
-        response=make_response(papers[4])
-        response.headers['Content-Type']='application/pdf'
-        response.headers['Content-Disposition']=f"attachment; filename='{papers[3]}'"
-        return response
-    
+def download(table, id):
+    try:
+        cur = mysql.connection.cursor()
+        if table == "notes":
+            cur.execute("SELECT * FROM notes WHERE id=%s", (id,))
+            data = cur.fetchone()
+        else:
+            cur.execute("SELECT * FROM papers WHERE id=%s", (id,))
+            data = cur.fetchone()
+
+        if data:
+            response = make_response(data[4])
+            response.headers['Content-Type'] = 'application/pdf'
+            response.headers['Content-Disposition'] = f"attachment; filename='{data[3]}'"
+            return response
+        else:
+            flash('File not found', 'danger')
+            return redirect(url_for('index'))
+    except Exception as e:
+        flash('An error occurred while downloading the file', 'danger')
+        print("Error:", e)
+        return redirect(url_for('index'))
+    finally:
+        if 'cur' in locals():
+            cur.close()
+
 
 
 
