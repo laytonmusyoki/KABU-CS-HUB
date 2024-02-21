@@ -224,8 +224,6 @@ def papers():
             code=request.form['code']
             file=request.files['pdf']
             cur=mysql.connection.cursor()
-            cur.execute("SELECT * FROM papers WHERE pdf=%s",(file))
-            data=cur.fetchone()
             cur.execute("INSERT INTO papers(semester,code,file_name,pdf) VALUES(%s,%s,%s,%s)",(semester,code,file.filename,file.read(),))
             mysql.connection.commit()
             cur.close()
@@ -246,7 +244,6 @@ def download(table, id):
         else:
             cur.execute("SELECT * FROM papers WHERE id=%s", (id,))
             data = cur.fetchone()
-
         if data:
             response = make_response(data[4])
             response.headers['Content-Type'] = 'application/pdf'
