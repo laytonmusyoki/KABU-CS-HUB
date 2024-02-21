@@ -631,10 +631,13 @@ footer .follow a:hover {
 }
 
 @media (max-width:640px) {
-    .box{
+    .box ,.boxs{
         width: 400px;
     }
     .box input , select{
+        height: 50px;
+    }
+    .boxs input , select{
         height: 50px;
     }
 }
