@@ -634,6 +634,9 @@ footer .follow a:hover {
     .box{
         width: 400px;
     }
+    .box input , select{
+        height: 50px;
+    }
 }
 
 .boxs{
